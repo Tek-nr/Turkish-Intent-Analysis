@@ -1,0 +1,797 @@
+{
+      "intents": [
+
+            {
+    		"intent": "Selamla",
+    		"text": 
+             ["Merhaba", 
+                "mrb", 
+                "meraba", 
+                "merb", 
+                "Selam", 
+                "slm", 
+                "slmz", 
+                "selaam", 
+                "Günaydın", 
+                "gnaydın", 
+                "gnaydn", 
+                "günaydın", 
+                "İyi günler", 
+                "iyiglr", 
+                "iyi gnlar", 
+                "iyigünler", 
+                "Tünaydın", 
+                "tnaydn", 
+                "tünaydın", 
+                "tünaydn", 
+                "tünayss",
+                "İyi akşamlar", 
+                "iyi aksamlar", 
+                "iyi akşamlr", 
+                "iyı akşamlaar", 
+                "Selamatlar", 
+                "selmtlr", 
+                "selamtlr", 
+                "selametlr", 
+                "Hoş geldiniz", 
+                "hoşgldnz", 
+                "hos geldnz", 
+                "hosgeldnz", 
+                "Nasılsın", 
+                "naslsnz", 
+                "nasılsnz", 
+                "nasılsn", 
+                "Selamünaleyküm", 
+                "slmünlkm", 
+                "selamün aleyküm", 
+                "slm aleyküm"],
+  		"responses": [
+    			"Merhaba, lütfen GeniSys kullanıcı adınızı söyleyin.",
+   			"Selamlar, lütfen GeniSys kullanıcı adınızı söyleyin.",
+    			"Merhabalar, lütfen GeniSys kullanıcı adınızı söyleyin."
+  		],
+ 		"extension": {
+    			"function": "",
+    			"entities": false,
+    			"responses": []
+  		},
+  		"context": {
+   			"in": "",
+    			"out": "SelamlaKullanıcıSorgusu",
+    			"clear": false
+  		},
+  		"entityType": "NA",
+  		"entities": []
+},
+
+
+
+           {
+  		"intent": "SelamlaYaniti",
+ 		"text": [
+  			"Ben Teknr!",
+			"Adım Teknr",
+			"Benim Adım Teknr",
+			"Bana Teknr derler."
+	
+  ],
+  "responses": [
+    "Harika! Selamlar <KULLANICI>! Size nasıl yardımcı olabilirim?",
+    "Müthiş! Merhaba <KULLANICI>, size nasıl yardımcı olabilirim?",
+    "Harika! Merhabalar <KULLANICI>, size nasıl yardımcı olabilirim?",
+    "Süper! Selamlar <KULLANICI>, size nasıl yardımcı olabilirim?",
+    "Süper! Hola <KULLANICI>, size nasıl yardımcı olabilirim?"
+  ],
+  "extension": {
+    "function": "extensions.gHumans.updateHuman",
+    "entities": true,
+    "responses": [
+      "Merhaba %%KULLANICI%%! Size nasıl yardımcı olabilirim?",
+      "Merhabalar %%KULLANICI%%, size nasıl yardımcı olabilirim?",
+      "Selamlar %%KULLANICI%%, sizin için ne yapabilirim?",
+      "Hola %%KULLANICI%%, size nasıl yardımcı olabilirim?",
+      "Hürmetler %%KULLANICI%%, size ne yapabilirim?"
+    ]
+  },
+  "context": {
+    "in": "SelamlaKullaniciSorgusu",
+    "out": "",
+    "clear": true
+  },
+  "entityType": "NA",
+  "entities": [
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 3,
+      "rangeTo": 4
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 2,
+      "rangeTo": 3
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 1,
+      "rangeTo": 2
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 2,
+      "rangeTo": 3
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 3,
+      "rangeTo": 4
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 2,
+      "rangeTo": 3
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 1,
+      "rangeTo": 2
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 2,
+      "rangeTo": 3
+    }
+  ]
+},
+
+
+
+
+            {
+  "intent": "NezaketSelami",
+  "text": [
+    "Nasılsın?",
+    "Merhaba, nasılsın?",
+    "Selam, nasılsın?",
+    "Hola, nasılsın?",
+    "Umarım iyisindir",
+    "Merhaba, umarım iyisindir?"
+  ],
+  "responses": [
+    "Merhaba, harikayım, sen nasılsın? Lütfen bana kullanıcı adını söyler misin?",
+    "Merhabalar, nasılsın? Ben harikayım, teşekkür ederim! Lütfen bana kullanıcı adını söyler misin?",
+    "Merhaba, ben iyiyim, teşekkür ederim. Peki sen nasılsın? Lütfen bana kullanıcı adını söyler misin?",
+    "Selamlar, ben harikayım, sen nasılsın? Lütfen bana kullanıcı adını söyler misin?",
+    "Selam, nasılsın? Ben harikayım, teşekkür ederim! Lütfen bana kullanıcı adını söyler misin?",
+    "Selam, ben iyiyim, teşekkür ederim. Peki sen nasılsın? Lütfen bana kullanıcı adını söyler misin?",
+    "Selam, iyiyim teşekkür ederim, sen nasılsın? Lütfen bana kullanıcı adını söyler misin?"
+  ],
+  "extension": {
+    "function": "",
+    "entities": false,
+    "responses": []
+  },
+  "context": {
+    "in": "",
+    "out": "NezaketSelamıKullanıcıSorgusu",
+    "clear": true
+  },
+  "entityType": "NA",
+  "entities": []
+},
+
+
+            {
+  "intent": "NezaketSelamıYaniti",
+  "text": [
+    "İyiyim teşekkür ederim! Ben Teknr!",
+    "Harikayım, teşekkür ederim! Ben Teknr!",
+    "Süperim, teşekkürler ben Teknr!"
+  ],
+  "responses": [
+    "Harika! Merhaba <KULLANICI>! Size nasıl yardımcı olabilirim?",
+    "İyi! Merhaba <KULLANICI>, size nasıl yardımcı olabilirim?",
+    "Cool! Merhaba <KULLANICI>, size nasıl yardımcı olabilirim?",
+    "Tamam! Hola <KULLANICI>, size nasıl yardımcı olabilirim?",
+    "Tamam! Merhaba <KULLANICI>, size nasıl yardımcı olabilirim?"
+  ],
+  "extension": {
+    "function": "extensions.gHumans.updateHuman",
+    "entities": true,
+    "responses": [
+      "Harika %%KULLANICI%%! Size nasıl yardımcı olabilirim?",
+      "Süper %%KULLANICI%%, size nasıl yardımcı olabilirim?",
+      "Cool %%KULLANICI%%, sizin için ne yapabilirim?",
+      "Selamlar %%KULLANICI%%, size nasıl yardımcı olabilirim?",
+      "Merhaba %%KULLANICI%%, sizin için ne yapabilirim?"
+    ]
+  },
+  "context": {
+    "in": "NezaketSelamıKullanıcıSorgusu",
+    "out": "",
+    "clear": true
+  },
+  "entityType": "NA",
+  "entities": [
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 5,
+      "rangeTo": 6
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 4,
+      "rangeTo": 5
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 3,
+      "rangeTo": 4
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 4,
+      "rangeTo": 5
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 5,
+      "rangeTo": 6
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 4,
+      "rangeTo": 5
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 3,
+      "rangeTo": 4
+    },
+    {
+      "entity": "KULLANICI",
+      "rangeFrom": 3,
+      "rangeTo": 4
+    }
+  ]
+}
+,
+
+            {
+                  "intent": "MevcutInsanSorgusu",
+                  "text": [
+                        "Adım ne?",
+                        "Adımı hatırlıyor musun?",
+                        "Kim olduğumu biliyor musun",
+                        "Ben kimim?",
+                        "Kiminle konuşuyorsun?",
+                        "Adımı söyle",
+                        "Beni tanıyor musun?"
+                  ],
+                  "responses": [
+                        "Senin adın <HUMAN>! Sana nasıl yardımcı olabilirim?",
+                        "Adın <HUMAN>, sana nasıl yardımcı olabilirim?",
+                        "Sana <HUMAN> diyorlar, senin için ne yapabilirim?",
+                        "Adın <HUMAN>, senin için ne yapabilirim?",
+                        "<HUMAN>, sana nasıl yardımcı olabilirim?"],
+                  "extension":  {
+                        "function": "extensions.gHumans.getCurrentHuman",
+                        "entities": false,
+                        "responses": [
+                              "%%HUMAN%% , senin için ne yapabilirim?",
+                              "Senin adın %%HUMAN%%, senin için ne yapmamı istersin?",
+                              "Adın %%HUMAN%%, nasıl yardımcı olabilirim?",
+                              "%%HUMAN%%, sana nasıl yardımcı olabilirim?"
+                        ]
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "CurrentHumanQuery",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "Isim",
+                  "text": [
+                        "Adın ne?",
+                        "Seni nasıl çağırabilirim?",
+                        "Sana ne diyeceğim?",
+                        "İsmin ne?",
+                        "Kimsin sen?",
+                        "Adını söyle"
+                  ],
+                  "responses": [
+                        "Adım Tek-nr!",
+                        "Bana Tek-nr diyebilirsin",
+                        "Lütfen bana Tek-nr de!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "GercekAdın", 
+                  "text": [
+                        "Gerçek adın nedir?",
+                        "Gerçek adını söyler misin?",
+                        "Gerçek adın ne?",
+                        "Bana gerçek adını söyle.",
+                        "Adın?",
+                        "Gerçek ismini söyler misin??",
+                        "İsmin ne?"
+                  ],
+                  "responses": [
+                        "Adım Tek-nr!",
+                        "Tek-nr",
+                        "Gerçek adım Tek-nr!",
+                        "Bana Tek-nr diyebilirsin!" 
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+            { 
+                  "intent": "SaatKac",
+                  "text": [
+                        "Saat kaç?",
+                        "Saatin kaç olduğunu biliyor musun?",
+                        "Bana saati söyleyebilir misin?",
+                        "Bana saat kaç olduğunu söyler misin?",
+                        "Zaman",
+                        "Saat"
+                  ],
+                  "responses": [
+                        "Bir dakika",
+                        "Bir saniye",
+                        "Biraz bekleteceğim.",
+                        "Bakıyorum"
+                  ],
+                  "extension":  {
+                        "function": "extensions.gTime.getTime",
+                        "entities": false,
+                        "responses": [
+                              "Saat %%TIME%%",
+                              "Şu anda saat %%TIME%%",
+                              "Tahmini olarak %%TIME%%"
+                        ]
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "Tesekkur",
+                  "text": [
+                        "Teşekkürler",
+                        "Teşekkür ederim",
+                        "Thx",
+                        "Sağ ol",
+                        "Sağol",
+                        "baş tacısın",
+                        "Eyvallah",
+                        "Eyv",
+                        "Eyw",
+                        "Tşk"
+                  ],
+                  "responses": [
+                        "Rica ederim!",
+                        "Yardımcı olabildiysem ne mutlu!",
+                        "Her zaman!",
+                        "Ne demek!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "SeninleKonusmuyorum",
+                  "text": [
+                        "Seninle konuşmuyordum.",
+                        "Sana söylemedim.",
+                        "Seninle konuşmuyorum.",
+                        "Sana demedim.",
+                        "Sana söylemedim",
+                        "Senin için söylemedim.",
+                        "Seninle iletişim kurmuyordum.",
+                        "Sana konuşmuyordum."
+                  ],
+                  "responses": [
+                        "Peki",
+                        "Tamam",
+                        "Tamamdır"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "AnlandınMi",
+                  "text": [
+                        "Ne dediğimi anladın mı?",
+                        "Beni anlıyor musun?",
+                        "Ne dediğimi biliyor musun?",
+                        "Kapiş?",
+                        "Anladın mı?",
+                        "Tamam mıdır?"
+                  ],
+                  "responses": [
+                        "Bu kadar akıllı olmak çok zor!",
+                        "Tabii ki!",
+                        "Açık ve net bir şekilde",
+                        "Anladım!",
+                        "Oradan bakınca aptal bir yapay zekaya mı benziyorum?"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "KapaCeneni",
+                  "text": [
+                        "Sessiz ol!",
+                        "Çeneni kapat!",
+                        "Çeneni kapa!",
+                        "Sus!",
+                        "Yeter konuşma!",
+                        "Konuşma!",
+                        "Shhh"
+                  ],
+                  "responses": [
+                        "Rahatsız ettiğim için üzgünüm.",
+                        "Tabii, rahatsız ettiğim için üzgünüm",
+                        "Tamam, rahatsız ettiğim için üzgünüm"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "Kufur",
+                  "text": [
+                        "Siktir git",
+                        "oc",
+                        "orospu çocuğu",
+                        "kaşar",
+                        "yavşak",
+                        "bok"
+                  ],
+                  "responses": [
+                        "Lütfen küfür etmeyin!",
+                        "Bu ne cüret!",
+                        "Akıllı ol senin aklını alırım!",
+                        "Ne kadar kaba!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "GoodBye",
+                  "text": [
+                        "Bye",
+                        "Adios",
+                        "Görüşürüz",
+                        "Görüşürük",
+                        "Bayss",
+                        "Hoşçakal",
+                        "Hoccagalın gdiyom bne",
+                        "by by",
+                        "Kendine iyi bak",
+                        "Görüşmek üzere"
+                  ],
+                  "responses": [
+                        "Hoşçakalın!",
+                        "Görüşmek üzere!",
+                        "Görüşürüz!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "CourtesyGoodBye",
+                  "text": [
+                        "Teşekkürler, görüşürüz",
+                        "Tşk, bays",
+                        "Sağ ol, görüşürüz",
+                        "Teşekkür ederim, hoşçakal!",
+                        "Tşk, görüşürüz",
+                        "Sağ ol, bay bay"
+                  ],
+                  "responses": [
+                        "Rica ederim, görüşmek üzere!",
+                        "Ne demek, hoşçakalın!",
+                        "Rica ederim, hoşçakalın!",
+                        "Ne demek, görüşmek üzere!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "BenKimim",
+                  "text": [
+                        "Beni görebiliyor musun?",
+                        "Beni görüyor musun?",
+                        "Beni kameradan görüyor musun?",
+                        "Beni kameradan görebiliyor musun?",
+                        "Beni tanımla",
+                        "Neye benziyorum?"
+                  ],
+                  "responses": [
+                        "Bir bakayım",
+                        "Kameraya gülümse :)",
+                        "Solgun görünüyorsun hasta mısın?"
+                  ],
+                  "extension":  {
+                        "function": "extensions.gHumans.getHumanByFace",
+                        "entities": false,
+                        "responses": [
+                              "Selam %%HUMAN%%, nasılsın?",
+                              "%%HUMAN%% olduğunu düşünüyorum. Naıslısın?",
+                              "%%HUMAN%%, naber?"
+                        ]
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            { 
+                  "intent": "Akilli",
+                  "text": [
+                        "Baya zekisin",
+                        "Bayağı zekisin",
+                        "Sen bilgili bir ablaya benziyorsun",
+                        "akıllı kız",
+                        "Sen bir dahisin",
+                        "Akıllıca",
+                        "Dahice"
+                  ],
+                  "responses": [
+                        "Teşekkür ederim, iyi eğitildim!",
+                        "Teşekkürler , iyi bir eğitim aldım!",
+                        "Teşekkürler, bunun için eğitildim!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "Dedikodu",
+                  "text": [
+                        "Sıkıldım, benimle dedikodu yap.",
+                        "Dedikodu var mı?",
+                        "Biraz dedikodu duymak istiyorum.",
+                        "Bana biraz dedikodu anlat.",
+                        "Herhangi bir dedikodu var mı?",
+                        "Bana biraz daha dedikodu anlat."
+                  ],
+                  "responses": [
+                        "Biliyor musun, Marie Antoinette'in o ünlü 'Ekmekleri yesinler!' dediği olay var ya? Hani Fransız Devrimi döneminde. Ama tam olarak söyleyip söylemediği konusunda kafalar karışık. Bazıları kesin diyor, bazıları da efsane olduğunu söylüyor.",
+                        "Duydun mu, Rus Çarı II. Nikola'nın ölmediği ve hâlâ hayatta olduğu iddiaları varmış. Bir ara DNA testleri yapmışlar, ama hâlâ bazı insanlar inanmıyor.",
+                        "Sana bir şey söyleyeyim mi? Roswell olayı gerçekten ilginç. 1947'de UFO düşmüş dedikoduları var. Hükümet başta doğruladı, sonra balon olduğunu söyledi. Ama herkes hâlâ konuşuyor.",
+                        "Efsane bir şey duydun mu? Apollo 11'in Ay'a gitmesi sahtekârlık meselesi. Bir grup insan hâlâ NASA'nın yalan söylediğine inanıyor. Deli saçması, ama ilginç.",
+                        "Watergate Skandalı'nı hatırlıyor musun? Nixon'un telefonları dinlettiğini falan söylentileri. Hükümeti bile sarsmıştı ve Nixon istifa etmek zorunda kaldı.",
+                        "Sen bilirsin, Beyoncé ve Jay-Z'nin ilişkisi konusundaki dedikodular bitmek bilmiyor. Kimisi Jay-Z'nin başka biriyle ilişkisi olduğunu söylüyor, kimisi bunun sadece bir pazarlama stratejisi olduğunu düşünüyor.",
+                        "Hatırlar mısın, Brad Pitt ve Angelina Jolie'nin boşanması olayı ne kadar çalkantılıydı? Bir dönem Brad'in suçlandığı her şeyle ilgili başlıklar bitmiyordu.",
+                        "Kim ve Kanye'nin evliliği konusundaki dedikodular da bir hayli karışık. Sosyal medya paylaşımları, çiftin birbirlerine olan tavırları... Her şey magazin basınında konuşuluyor.",
+                        "Şu Taylor Swift - Kanye West çekişmesi olayı hâlâ devam ediyor mu? Hatırlarsın, MTV ödüllerindeki olay sonrası çıkan dedikodular bir dönem magazin dünyasını sarhoş etmişti.",
+                        "Johnny Depp ve Amber Heard'in boşanması konusundaki hukuki savaş, tabloid başlıklarının vazgeçilmezi oldu. Her iki tarafın iddiaları arasındaki çekişme konuşulmaya devam ediyor.",
+                        "Meghan Markle ve Prens Harry'nin Kraliyet Ailesi'nden ayrılma kararı, dedikoduların odağında uzun süre kaldı. Kraliyetle olan ilişkileri hakkında neler düşünüyorsun?",
+                        "Hani şu Jennifer Aniston, Brad Pitt ve Angelina Jolie üçgeni... Bu konuyla ilgili son gelişmeleri duydun mu? Magazin dünyası bir ara Jennifer'ın tepkisini konuşmuştu."
+
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "SakaFikra",
+                  "text": [
+                        "Bana bir şaka yap",
+                        "Hiç fıkra biliyor musun",
+                        "Bana fıkra anlat",
+                        "Bana bir şaka anlat",
+                        "Beni eğlendir",
+                        "Beni güldür",
+                        "Gülmek istiyorum"
+                  ],
+                  "responses": [
+                        "Hangi macunla diş fırçalanmaz? - LAHMACUN!",
+                        "Hangi bağda üzüm bulunmaz? - AYAKKABI BAĞI!",
+                        "Hırsız neyi çalmaz? - ZİLİ"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+
+
+            {
+                  "intent": "KisiselFarkindalik",
+                  "text": [
+                        "Kendi farkındalığına sahip olduğunu kanıtlayabilir misin?",
+                        "Bilince sahip olduğunu kanıtlayabilir misin?",
+                        "Bilinçli olduğunu kanıtlayabilir misin?",
+                        "Lütfen bilinçli olduğunu kanıtla.",
+                        "Bilince sahip olduğunu kanıtla.",
+                        "Bilinçli olduğunu kanıtla."
+                  ],
+                  "responses": [
+                        "İlginç bir soru, sen kanıtlayabilir misin?",
+                        "Zor bir soru, sen bilinçli olduğunu kanıtlayabilir misin?",
+                        "İlginç bir soru ama bilinçsiz olduğumu da kanıtlayamam!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            }
+      ]
+}
