@@ -1,5 +1,7 @@
 import re
 import pandas as pd
+import itertools
+
 
 def data_cleaning(text):
     text = text.replace("\n", " ").lower() # Replace line breaks with space and convert the text to lowercase
@@ -11,11 +13,15 @@ def data_cleaning(text):
 
 def remove_stopwords(text, stopwords):
     # Splitted the text by space, filter out stopwords, and join the cleaned words
+    text = data_cleaning(text)
     return " ".join(word for word in text.split() if word.lower() not in stopwords)
 
 def word_tokenize(text):
     words = re.findall(r'\b\w+\b', text)  # Used a regular expression to split the text into words
     return words
+
+def dup_vanish(s1):
+     return (''.join(i for i, _ in itertools.groupby(s1)))
 
 def balance_data(df_patterns):
     df_intent = df_patterns['intent']
