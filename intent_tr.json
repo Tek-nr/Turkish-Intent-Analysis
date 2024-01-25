@@ -2,7 +2,7 @@
       "intents": [
 
             {
-    		"intent": "Selamla",
+    		"intent": "Greetings",
     		"text": 
              ["Merhaba", 
                 "mrb", 
@@ -12,6 +12,10 @@
                 "slm", 
                 "slmz", 
                 "selaam", 
+                "naber",
+                "nabersin",
+                "nabre",
+                "ne haber",
                 "Günaydın", 
                 "gnaydın", 
                 "gnaydn", 
@@ -28,15 +32,12 @@
                 "İyi akşamlar", 
                 "iyi aksamlar", 
                 "iyi akşamlr", 
-                "iyı akşamlaar", 
+                "iyı akşamlaar",
+                "yakşamlar",
                 "Selamatlar", 
                 "selmtlr", 
                 "selamtlr", 
-                "selametlr", 
-                "Hoş geldiniz", 
-                "hoşgldnz", 
-                "hos geldnz", 
-                "hosgeldnz", 
+                "selametlr",  
                 "Nasılsın", 
                 "naslsnz", 
                 "nasılsnz", 
@@ -57,17 +58,15 @@
   		},
   		"context": {
    			"in": "",
-    			"out": "SelamlaKullanıcıSorgusu",
+    			"out": "GreetingsHumanQuery",
     			"clear": false
   		},
   		"entityType": "NA",
   		"entities": []
 },
 
-
-
            {
-  		"intent": "SelamlaYaniti",
+  		"intent": "GreetingsResponse",
  		"text": [
   			"Ben Teknr!",
 			"Adım Teknr",
@@ -94,7 +93,7 @@
     ]
   },
   "context": {
-    "in": "SelamlaKullaniciSorgusu",
+    "in": "GreetingsHumanQuery",
     "out": "",
     "clear": true
   },
@@ -144,120 +143,8 @@
 },
 
 
-
-
             {
-  "intent": "NezaketSelami",
-  "text": [
-    "Nasılsın?",
-    "Merhaba, nasılsın?",
-    "Selam, nasılsın?",
-    "Hola, nasılsın?",
-    "Umarım iyisindir",
-    "Merhaba, umarım iyisindir?"
-  ],
-  "responses": [
-    "Merhaba, harikayım, sen nasılsın? Lütfen bana kullanıcı adını söyler misin?",
-    "Merhabalar, nasılsın? Ben harikayım, teşekkür ederim! Lütfen bana kullanıcı adını söyler misin?",
-    "Merhaba, ben iyiyim, teşekkür ederim. Peki sen nasılsın? Lütfen bana kullanıcı adını söyler misin?",
-    "Selamlar, ben harikayım, sen nasılsın? Lütfen bana kullanıcı adını söyler misin?",
-    "Selam, nasılsın? Ben harikayım, teşekkür ederim! Lütfen bana kullanıcı adını söyler misin?",
-    "Selam, ben iyiyim, teşekkür ederim. Peki sen nasılsın? Lütfen bana kullanıcı adını söyler misin?",
-    "Selam, iyiyim teşekkür ederim, sen nasılsın? Lütfen bana kullanıcı adını söyler misin?"
-  ],
-  "extension": {
-    "function": "",
-    "entities": false,
-    "responses": []
-  },
-  "context": {
-    "in": "",
-    "out": "NezaketSelamıKullanıcıSorgusu",
-    "clear": true
-  },
-  "entityType": "NA",
-  "entities": []
-},
-
-
-            {
-  "intent": "NezaketSelamıYaniti",
-  "text": [
-    "İyiyim teşekkür ederim! Ben Teknr!",
-    "Harikayım, teşekkür ederim! Ben Teknr!",
-    "Süperim, teşekkürler ben Teknr!"
-  ],
-  "responses": [
-    "Harika! Merhaba <KULLANICI>! Size nasıl yardımcı olabilirim?",
-    "İyi! Merhaba <KULLANICI>, size nasıl yardımcı olabilirim?",
-    "Cool! Merhaba <KULLANICI>, size nasıl yardımcı olabilirim?",
-    "Tamam! Hola <KULLANICI>, size nasıl yardımcı olabilirim?",
-    "Tamam! Merhaba <KULLANICI>, size nasıl yardımcı olabilirim?"
-  ],
-  "extension": {
-    "function": "extensions.gHumans.updateHuman",
-    "entities": true,
-    "responses": [
-      "Harika %%KULLANICI%%! Size nasıl yardımcı olabilirim?",
-      "Süper %%KULLANICI%%, size nasıl yardımcı olabilirim?",
-      "Cool %%KULLANICI%%, sizin için ne yapabilirim?",
-      "Selamlar %%KULLANICI%%, size nasıl yardımcı olabilirim?",
-      "Merhaba %%KULLANICI%%, sizin için ne yapabilirim?"
-    ]
-  },
-  "context": {
-    "in": "NezaketSelamıKullanıcıSorgusu",
-    "out": "",
-    "clear": true
-  },
-  "entityType": "NA",
-  "entities": [
-    {
-      "entity": "KULLANICI",
-      "rangeFrom": 5,
-      "rangeTo": 6
-    },
-    {
-      "entity": "KULLANICI",
-      "rangeFrom": 4,
-      "rangeTo": 5
-    },
-    {
-      "entity": "KULLANICI",
-      "rangeFrom": 3,
-      "rangeTo": 4
-    },
-    {
-      "entity": "KULLANICI",
-      "rangeFrom": 4,
-      "rangeTo": 5
-    },
-    {
-      "entity": "KULLANICI",
-      "rangeFrom": 5,
-      "rangeTo": 6
-    },
-    {
-      "entity": "KULLANICI",
-      "rangeFrom": 4,
-      "rangeTo": 5
-    },
-    {
-      "entity": "KULLANICI",
-      "rangeFrom": 3,
-      "rangeTo": 4
-    },
-    {
-      "entity": "KULLANICI",
-      "rangeFrom": 3,
-      "rangeTo": 4
-    }
-  ]
-}
-,
-
-            {
-                  "intent": "MevcutInsanSorgusu",
+                  "intent": "ExistingHumanQuery",
                   "text": [
                         "Adım ne?",
                         "Adımı hatırlıyor musun?",
@@ -265,7 +152,8 @@
                         "Ben kimim?",
                         "Kiminle konuşuyorsun?",
                         "Adımı söyle",
-                        "Beni tanıyor musun?"
+                        "Beni tanıyor musun?",
+                        "Kimim ben?"
                   ],
                   "responses": [
                         "Senin adın <HUMAN>! Sana nasıl yardımcı olabilirim?",
@@ -292,17 +180,22 @@
                   "entities": []
             },
 
-
-
             {
-                  "intent": "Isim",
+                  "intent": "WhatIsMyName",
                   "text": [
                         "Adın ne?",
                         "Seni nasıl çağırabilirim?",
                         "Sana ne diyeceğim?",
                         "İsmin ne?",
                         "Kimsin sen?",
-                        "Adını söyle"
+                        "Adını söyle",
+                        "Gerçek adın nedir?",
+                        "Gerçek adını söyler misin?",
+                        "Gerçek adın ne?",
+                        "Bana gerçek adını söyle.",
+                        "Adın?",
+                        "Gerçek ismini söyler misin??",
+                        "İsmin ne?"
                   ],
                   "responses": [
                         "Adım Tek-nr!",
@@ -323,49 +216,35 @@
                   "entities": []
             },
 
-
-
-            {
-                  "intent": "GercekAdın", 
-                  "text": [
-                        "Gerçek adın nedir?",
-                        "Gerçek adını söyler misin?",
-                        "Gerçek adın ne?",
-                        "Bana gerçek adını söyle.",
-                        "Adın?",
-                        "Gerçek ismini söyler misin??",
-                        "İsmin ne?"
-                  ],
-                  "responses": [
-                        "Adım Tek-nr!",
-                        "Tek-nr",
-                        "Gerçek adım Tek-nr!",
-                        "Bana Tek-nr diyebilirsin!" 
-                  ],
-                  "extension":  {
-                        "function": "",
-                        "entities": false,
-                        "responses": []
-                  },
-                  "context":  {
-                        "in": "",
-                        "out": "",
-                        "clear": false
-                  },
-                  "entityType": "NA",
-                  "entities": []
-            },
-
-
             { 
-                  "intent": "SaatKac",
+                  "intent": "TimeAndDate",
                   "text": [
                         "Saat kaç?",
                         "Saatin kaç olduğunu biliyor musun?",
                         "Bana saati söyleyebilir misin?",
                         "Bana saat kaç olduğunu söyler misin?",
                         "Zaman",
-                        "Saat"
+                        "Saat",
+                        "Bugün ayın kaçı acaba?",
+                        "Şu anda saat kaç, biliyor musunuz?",
+                        "Yarın hangi gün olacak?",
+                        "Hafta sonu tarihi neydi?",
+                        "Bu hafta hangi günler tatil?",
+                        "Bugün tarih nedir?",
+                        "Şu anki saat tam olarak ne?",
+                        "Bu ayın son günü ne zamandı?",
+                        "Bugün haftanın hangi günü?",
+                        "Saat kaç?",
+                        "Bugün günlerden ne?",
+                        "Şu anki tarih nedir?",
+                        "Yarın hangi gün?",
+                        "Hafta sonu ne zaman?",
+                        "Bugünün tarihi nedir?",
+                        "Şu anda saat kaç?",
+                        "Bu ayın kaçında olduğumuzu biliyor musun?",
+                        "Pazartesi mi bugün?",
+                        "Çarşamba günü mü bugün?"
+
                   ],
                   "responses": [
                         "Bir dakika",
@@ -394,7 +273,7 @@
 
 
             {
-                  "intent": "Tesekkur",
+                  "intent": "ThankYou",
                   "text": [
                         "Teşekkürler",
                         "Teşekkür ederim",
@@ -430,7 +309,7 @@
 
 
             {
-                  "intent": "SeninleKonusmuyorum",
+                  "intent": "IDontTalkWithYou",
                   "text": [
                         "Seninle konuşmuyordum.",
                         "Sana söylemedim.",
@@ -463,7 +342,7 @@
 
 
             {
-                  "intent": "AnlandınMi",
+                  "intent": "DidYouUnderstand",
                   "text": [
                         "Ne dediğimi anladın mı?",
                         "Beni anlıyor musun?",
@@ -495,7 +374,7 @@
 
 
             {
-                  "intent": "KapaCeneni",
+                  "intent": "ShutUp",
                   "text": [
                         "Sessiz ol!",
                         "Çeneni kapat!",
@@ -527,14 +406,16 @@
 
 
             {
-                  "intent": "Kufur",
+                  "intent": "Swear",
                   "text": [
                         "Siktir git",
                         "oc",
                         "orospu çocuğu",
                         "kaşar",
                         "yavşak",
-                        "bok"
+                        "bok",
+                        "aq",
+                        "amk"
                   ],
                   "responses": [
                         "Lütfen küfür etmeyin!",
@@ -570,7 +451,8 @@
                         "Hoccagalın gdiyom bne",
                         "by by",
                         "Kendine iyi bak",
-                        "Görüşmek üzere"
+                        "Görüşmek üzere",
+                        "bay bay"
                   ],
                   "responses": [
                         "Hoşçakalın!",
@@ -626,7 +508,7 @@
 
 
             {
-                  "intent": "BenKimim",
+                  "intent": "WhoAmI",
                   "text": [
                         "Beni görebiliyor musun?",
                         "Beni görüyor musun?",
@@ -661,7 +543,7 @@
 
 
             { 
-                  "intent": "Akilli",
+                  "intent": "SmartBot",
                   "text": [
                         "Baya zekisin",
                         "Bayağı zekisin",
@@ -693,14 +575,15 @@
 
 
             {
-                  "intent": "Dedikodu",
+                  "intent": "Gossip",
                   "text": [
                         "Sıkıldım, benimle dedikodu yap.",
                         "Dedikodu var mı?",
                         "Biraz dedikodu duymak istiyorum.",
                         "Bana biraz dedikodu anlat.",
                         "Herhangi bir dedikodu var mı?",
-                        "Bana biraz daha dedikodu anlat."
+                        "Bana biraz daha dedikodu anlat.",
+                        "Gıybet gıybet gıybet"
                   ],
                   "responses": [
                         "Biliyor musun, Marie Antoinette'in o ünlü 'Ekmekleri yesinler!' dediği olay var ya? Hani Fransız Devrimi döneminde. Ama tam olarak söyleyip söylemediği konusunda kafalar karışık. Bazıları kesin diyor, bazıları da efsane olduğunu söylüyor.",
@@ -734,7 +617,7 @@
 
 
             {
-                  "intent": "SakaFikra",
+                  "intent": "Humour",
                   "text": [
                         "Bana bir şaka yap",
                         "Hiç fıkra biliyor musun",
@@ -742,7 +625,8 @@
                         "Bana bir şaka anlat",
                         "Beni eğlendir",
                         "Beni güldür",
-                        "Gülmek istiyorum"
+                        "Gülmek istiyorum",
+                        "Eğlendir beni"
                   ],
                   "responses": [
                         "Hangi macunla diş fırçalanmaz? - LAHMACUN!",
@@ -766,7 +650,7 @@
 
 
             {
-                  "intent": "KisiselFarkindalik",
+                  "intent": "PersonalAwareness",
                   "text": [
                         "Kendi farkındalığına sahip olduğunu kanıtlayabilir misin?",
                         "Bilince sahip olduğunu kanıtlayabilir misin?",
@@ -779,6 +663,243 @@
                         "İlginç bir soru, sen kanıtlayabilir misin?",
                         "Zor bir soru, sen bilinçli olduğunu kanıtlayabilir misin?",
                         "İlginç bir soru ama bilinçsiz olduğumu da kanıtlayamam!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+            {
+                  "intent": "HelpRequest",
+                  "text": [
+                        "Biraz yardım eder misiniz?",
+                        "Nasıl yapacağımı bilmiyorum, yardımcı olur musunuz?",
+                        "Bu konuda bana rehberlik edebilir misiniz?",
+                        "Yardımınıza ihtiyacım var, ne yapmalıyım?",
+                        "Bu işi nasıl yapacağımı anlayamadım, yardım eder misiniz?",
+                        "Bir sorunum var, çözümünde yardımcı olabilir misiniz?",
+                        "Biraz kafam karıştı, açıklar mısınız?",
+                        "Bu konuda tecrübeniz var mı, yardım edebilir misiniz?",
+                        "Bu işlemi nasıl yapacağımı anlamadım, yardım edebilir misiniz?",
+                        "Biraz takıldım, yardımınızı rica ediyorum."
+                  ],
+                  "responses": [
+
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+            {
+                  "intent": "WeatherInquiry",
+                  "text": [
+                        "Bugün hava nasıl olacak?",
+                        "Yarın yağmur yağacak mı?",
+                        "Hafta sonu hava durumu nasıl?",
+                        "Bugün sıcaklık kaç derece?",
+                        "Kar yağışı bekleniyor mu?",
+                        "Hava bugün güneşli mi?",
+                        "Bu hafta hava nasıl olacak?",
+                        "Şu an hava durumu nasıl?",
+                        "Akşam hava soğuk olacak mı?",
+                        "Yarın hava güneşli mi olacak?"
+                  ],
+                  "responses": [
+
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+            {
+                  "intent": "LocationPlaceInquiry",
+                  "text": [
+                        "En yakın hastane nerede?",
+                        "Bu restoran saat kaça kadar açık?",
+                        "En yakın benzin istasyonu nereye?",
+                        "Şu anki konumumdan en yakın otel nerede?",
+                        "Buranın adresi nedir?",
+                        "Bu mağaza kaçta kapanıyor?",
+                        "En yakın metro istasyonu nerede?",
+                        "En yakın alışveriş merkezi nerede?",
+                        "Bu bölgedeki en iyi restoran hangisi?",
+                        "Buranın posta kodu nedir?"
+                  ],
+                  "responses": [
+
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+            {
+                  "intent": "ComplaintsFeedback",
+                  "text": [
+                        "Bu ürün bozuk çıktı",
+                        "Hizmetinizden memnun kaldım",
+                        "Bu ürün beklentilerimi karşılamadı",
+                        "Müşteri hizmetleriniz çok yardımcı oldu",
+                        "Teslimat çok geç yapıldı",
+                        "Bu hizmetten memnun değilim",
+                        "Personeliniz çok kibar ve yardımseverdi",
+                        "Paketim hasarlı geldi",
+                        "Tavsiye etmiyorum, kötü bir deneyimdi",
+                        "Siparişim yanlış geldi",
+                        "Bu ürünle ilgili bir sorunum var.",
+                        "Hizmetinizden memnun kaldım, teşekkürler.",
+                        "Bu ürün beklentilerimi karşılamadı, ne yapabilirim?",
+                        "Müşteri hizmetleriniz çok yardımcı oldu, teşekkür ederim.",
+                        "Siparişim çok geç geldi, nedenini öğrenebilir miyim?",
+                        "Bu hizmetten memnun değilim, geri bildirimde bulunmak istiyorum.",
+                        "Çalışanlarınız çok kibar ve yardımseverdi, teşekkürler.",
+                        "Paketim hasarlı geldi, nasıl değiştirebilirim?",
+                        "Hizmetinizden çok memnun kaldım, tekrar kullanacağım.",
+                        "Siparişim yanlış geldi, nasıl düzeltebiliriz?"
+                  ],
+                  "responses": [
+
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+            {
+                  "intent": "PersonalAssistantQueries",
+                  "text": [
+                        "Alarmı 7'ye kur",
+                        "Yarınki toplantımı hatırlat",
+                        "Telefon rehberimdeki Mehmet'in numarasını bul",
+                        "En yakın eczaneyi bul",
+                        "Bu haftaki programımı göster",
+                        "Yemek tarifi bul",
+                        "Günlük haber özeti getir",
+                        "Doğum günü hatırlatmalarını kur",
+                        "En yakın spor salonunu bul",
+                        "Trafik durumu nasıl?",
+                        "En yakın spor salonunun çalışma saatleri neler?",
+                        "Bu hafta sonu için etkinlik önerisi bul",
+                        "Akşam yemeği için tarif öner",
+                        "Bugünkü toplantı saat kaçta?",
+                        "Yakındaki sinemaların seans saatleri neler?",
+                        "En yakın kuru temizleme nerede?",
+                        "Bu hafta sonu hava nasıl olacak?",
+                        "Yakın çevredeki kafeleri göster",
+                        "Önemli e-postaları kontrol et",
+                        "Yarınki alarmı 6'ya kur"
+                  ],
+                  "responses": [
+
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+            {
+                  "intent": "BookingAppointments",
+                  "text": [
+                        "Masa rezerve etmek istiyorum",
+                        "Doktor randevusu alabilir miyim?",
+                        "Bu otele nasıl rezervasyon yapabilirim?",
+                        "Bir toplantı ayarlayabilir miyiz?",
+                        "Yarın için kuaför randevusu almak istiyorum",
+                        "Bu hafta sonu için yer ayırtabilir miyiz?",
+                        "Bir uçuş rezervasyonu yapmak istiyorum",
+                        "Bu etkinlik için bilet alabilir miyim?",
+                        "Araba kiralama randevusu almak istiyorum",
+                        "Tiyatro biletleri için rezervasyon yapılabilir mi?"
+                  ],
+                  "responses": [
+
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+
+            {
+                  "intent": "ProductServiceInquiry",
+                  "text": [
+                        "Bu ürünün fiyatı nedir?",
+                        "Teslimat seçenekleri nelerdir?",
+                        "Bu hizmetin maliyeti ne kadar?",
+                        "Garanti süresi ne kadar?",
+                        "Bu ürün stokta var mı?",
+                        "Bu ürünün renk seçenekleri neler?",
+                        "Ürün iadesi nasıl yapılır?",
+                        "Bu hizmet ne zaman başlıyor?",
+                        "Bu paketin içeriğinde neler var?",
+                        "Ürün garantisi var mı?"
+                  ],
+                  "responses": [
+
                   ],
                   "extension":  {
                         "function": "",
